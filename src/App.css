@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,200&family=Poppins:ital,wght@0,100;0,200;0,300;0,700;1,100;1,200;1,300&family=Urbanist:ital,wght@0,100;0,200;0,300;1,100;1,200;1,400&display=swap');
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --mainPrimaryColor: #f57224;
+  --mainColor: #f58c4f;
+  --secColor: #f6b894;
+  --whiteColor: #fff;
+  --blackColor: #000;
+  --lightDark: #222;
+  --darkGrey: #afafaf;
+  --mainGrey: #ececec;
+  --transition: all 0.4s linear;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  background: #f5f5f5;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  color: var(--blackColor);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input {
+  outline: 0;
+  border: none;
+  background: transparent;
+}
+
+.spinner {
+  border: 5px solid;
+  border-top: 5px solid var(--lightGrey);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.not-found {
+  margin-top: 6rem;
+}
+
+.cart-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+}
+
+.cart-details {
+  background: var(--whiteColor);
+  padding: 1rem;
+  height: fit-content;
+  border-radius: 5px;
+}
+
+.ct {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #fafafa;
+}
+.cart {
+  border-bottom: 3px solid #fafafa;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+.cart-header {
+  display: flex;
+  gap: 1rem;
+}
+
+.cart-product-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cart-product-name{
+  font-size: 0.85rem;
+  max-width: 20rem;
+}
+.cart-image img {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.cart-functions {
+  display: flex;
+  justify-content: space-between;
+}
+.delete-product {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.delete-product:hover {
+  background: var(--secColor);
+}
+.delete-product button {
+  font-size: 2rem;
+}
+.delete-product  button svg {
+  fill: var(--mainColor);
+}
+.delete-product h4 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--mainColor);
+}
+
+.cart-toggle {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cart-toggle button {
+  width: 2rem;
+  height: 2rem;
+  color: var(--whiteColor);
+  background: var(--mainColor);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cart-toggle button:hover {
+  background: var(--secColor);
+}
+.cart-toggle h4 {
+  font-weight: 300;
+}
+
+.cart-summary-container {
+  background: var(--whiteColor);
+  height: fit-content;
+  border-radius: 5px;
+}
+
+.summary h2 {
+  border-bottom: 1px solid #fafafa;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.total-price p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.total-price h2 {
+  font-weight: 600;
+}
+.checkout-btn {
+  text-align: center;
+}
+.checkout-btn button {
+  border: none;
+  color: var(--whiteColor);
+  background: var(--mainColor);
+  padding: 1rem 2rem;
+  width: 23rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.checkout-btn button:hover {
+  background-color: var(--secColor);
+}
+
+@media screen and (max-width: 1024px) {
+  .cart-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-details {
+    margin-bottom: -5rem;
+  }
+  .cart-summary-container {
+    margin-bottom: 2rem;
+  }
+  .checkout-btn button {
+    width: 17rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cart-container {
+    width: 95%;
+  }
+}

@@ -1,0 +1,52 @@
+.category-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  background: var(--whiteColor);
+  border-radius: 5px;
+}
+.category-info-image img {
+  width: 300px;
+}
+.category-info-name,
+.category-info-price {
+  margin-left: 1rem;
+}
+.category-info-name{
+  text-transform: capitalize;
+}
+
+.category-info-price {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.category-info-price button {
+  background: var(--mainColor);
+  color: var(--whiteColor);
+  padding: 5px;
+  border-radius: 6px;
+  margin-bottom: -0.5rem;
+  cursor: pointer;
+  border: 2px solid;
+}
+.category-info-price button:hover {
+  background: var(--secColor);
+}
+
+.category-info-discount {
+  position: absolute;
+  right: 1rem;
+  top: 0.3rem;
+  color: #fcbd6e;
+  border-radius: 3px;
+  padding: 5px;
+  background: #feefde;
+}
+

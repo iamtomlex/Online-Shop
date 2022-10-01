@@ -1,0 +1,82 @@
+.products {
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.products h3 {
+  font-size: 1.5rem;
+  color: var(--mainColor);
+  padding: 0.5rem 1.5rem;
+}
+
+.products .swiper-slide {
+  width: 15%;
+}
+
+.product {
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--mainGrey);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.hot,
+.new {
+  position: absolute;
+  top: 0;
+  padding: 5px 20px;
+  color: var(--whiteColor);
+}
+.hot {
+  background: orangered;
+}
+.new {
+  background: greenyellow;
+}
+
+.product-image img {
+  width: 100%;
+}
+
+.product-details {
+  padding: 1.2rem 1rem;
+  text-align: center;
+  background: var(--whiteColor);
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+.add-to-cart {
+  background: var(--mainPrimaryColor);
+  padding: 0.8rem 1.25rem;
+  color: var(--whiteColor);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.add-to-cart:hover {
+  background: var(--mainColor);
+}
+
+@media screen and (max-width: 1324px) {
+  .products .swiper-slide {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .products .swiper-slide {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .products .swiper-slide {
+    width: 50%;
+  }
+}
